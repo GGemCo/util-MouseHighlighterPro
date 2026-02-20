@@ -57,25 +57,6 @@ public sealed class OverlayRenderer
         var strokeBrush = new SolidColorBrush(strokeColor);
         strokeBrush.Freeze();
 
-        // Shadow/glow (simple): draw an expanded transparent ellipse with blur effect via opacity + multiple strokes
-        if (circle.ShadowOpacity > 0 && circle.ShadowBlur > 0)
-        {
-            var glowColor = System.Windows.Media.Color.FromArgb((byte)(Math.Clamp(circle.ShadowOpacity, 0, 1) * 255), strokeColor.R, strokeColor.G, strokeColor.B);
-            var glowBrush = new SolidColorBrush(glowColor);
-            glowBrush.Freeze();
-
-            // Approximate blur using multiple strokes
-            var steps = 3;
-            for (int i = steps; i >= 1; i--)
-            {
-                var rr = radius + (circle.ShadowBlur * i / steps);
-                var tt = thickness + (circle.ShadowBlur * i / steps);
-                var pen = new System.Windows.Media.Pen(glowBrush, tt) { StartLineCap = PenLineCap.Round, EndLineCap = PenLineCap.Round };
-                pen.Freeze();
-                dc.DrawEllipse(null, pen, center, rr, rr);
-            }
-        }
-
         var penMain = new System.Windows.Media.Pen(strokeBrush, thickness) { StartLineCap = PenLineCap.Round, EndLineCap = PenLineCap.Round };
         penMain.Freeze();
 
