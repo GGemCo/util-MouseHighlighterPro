@@ -1,0 +1,15 @@
+
+<Window x:Class="MouseHighlighterPro.Windows.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:render="clr-namespace:MouseHighlighterPro.Rendering"
+        Title="Overlay"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        Focusable="False">
+    <render:OverlaySurface x:Name="Surface" />
+</Window>
