@@ -95,17 +95,6 @@
                             <TextBlock Text="{Binding StrokeB}" Width="44" VerticalAlignment="Center" Margin="8,0,0,0"/>
                         </StackPanel>
 
-                        <TextBlock Text="그림자" Margin="0,14,0,0" FontWeight="SemiBold"/>
-                        <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
-                            <TextBlock Text="Blur" Width="70" VerticalAlignment="Center"/>
-                            <Slider Width="260" Minimum="0" Maximum="60" Value="{Binding ShadowBlur}" />
-                            <TextBlock Text="{Binding ShadowBlur, StringFormat=F0}" Width="56" VerticalAlignment="Center" Margin="8,0,0,0"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
-                            <TextBlock Text="Opacity" Width="70" VerticalAlignment="Center"/>
-                            <Slider Width="260" Minimum="0" Maximum="1" Value="{Binding ShadowOpacity}" />
-                            <TextBlock Text="{Binding ShadowOpacity, StringFormat=F2}" Width="56" VerticalAlignment="Center" Margin="8,0,0,0"/>
-                        </StackPanel>
                     </StackPanel>
 
                     <!-- Preview (uses same renderer as overlay) -->

@@ -123,8 +123,6 @@ public sealed class AppHost : IDisposable
                 Thickness = s.Circle.Thickness,
                 Fill = s.Circle.Fill,
                 Stroke = s.Circle.Stroke,
-                ShadowBlur = s.Circle.ShadowBlur,
-                ShadowOpacity = s.Circle.ShadowOpacity,
             },
             ClickEffect = new ClickEffectSettings
             {

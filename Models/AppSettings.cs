@@ -26,8 +26,6 @@ public sealed class CircleStyle
     public ColorRgba Fill { get; set; } = new(255, 0, 0, 0.20);
     public ColorRgba Stroke { get; set; } = new(255, 0, 0, 0.95);
 
-    public double ShadowBlur { get; set; } = 18;
-    public double ShadowOpacity { get; set; } = 0.45;
 }
 
 public sealed class ClickEffectSettings

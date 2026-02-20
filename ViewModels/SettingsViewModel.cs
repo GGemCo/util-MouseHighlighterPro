@@ -99,17 +99,6 @@ public sealed class SettingsViewModel : ObservableObject
         set { _settings.Circle.Stroke = _settings.Circle.Stroke with { B = value }; Notify(); Notify(nameof(PreviewStroke)); }
     }
 
-    public double ShadowBlur
-    {
-        get => _settings.Circle.ShadowBlur;
-        set { _settings.Circle.ShadowBlur = Math.Clamp(value, 0, 100); Notify(); }
-    }
-
-    public double ShadowOpacity
-    {
-        get => _settings.Circle.ShadowOpacity;
-        set { _settings.Circle.ShadowOpacity = Math.Clamp(value, 0, 1); Notify(); }
-    }
 
     public bool ClickPulseEnabled
     {
